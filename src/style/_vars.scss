@@ -13,119 +13,57 @@
   --dark-blue: #2d68f0;
 }
 
-.content-wrapper {
-  width: 327px;
-  margin: 0 auto;
+@mixin text($font, $line: $font, $ls: normal) {
+  font-size: $font;
+  line-height: $line;
+  letter-spacing: $ls;
 }
 
-body {
-  font-family: "Spartan", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 22px;
-  color: var(--white);
+@mixin wh($width: 0, $height: $width) {
+  width: $width;
+  height: $height;
 }
 
-h1 {
-  font-family: "Antonio", sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 52px;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-family: "Antonio", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 26px;
-  letter-spacing: -0.75px;
-  margin: 0;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 9px;
-  line-height: 10px;
-  letter-spacing: 1.9px;
-  margin: 0;
-}
-
-h4 {
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-/**
-* ? Tablet
+/*
+    PADDING
 */
-@media (min-width: 768px) {
-  .content-wrapper {
-    width: 688px;
-  }
 
-  h1 {
-    font-size: 48px;
-    line-height: 62px;
-  }
-
-  h2 {
-    font-size: 24px;
-    line-height: 31px;
-    letter-spacing: -0.9px;
-  }
-
-  h3 {
-    font-size: 9px;
-    line-height: 25px;
-    letter-spacing: 1.9px;
-  }
-
-  h4 {
-    font-size: 11px;
-    line-height: 25px;
-    letter-spacing: 1px;
-  }
+@mixin pX($left: 0, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
 }
 
-/**
-* ? DeskTop
+@mixin pY($top: 0, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+/*
+    FLEX
 */
-@media (min-width: 1440px) {
-  .content-wrapper {
-    width: 1110px;
-  }
 
-  body {
-    font-size: 14px;
-    line-height: 25px;
-  }
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  h1 {
-    font-size: 80px;
-    line-height: 104px;
-  }
+@mixin flexSpaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  h2 {
-    font-size: 40px;
-    line-height: 52px;
-    letter-spacing: -1.5px;
-  }
-
-  h3 {
-    font-size: 12px;
-    line-height: 25px;
-    letter-spacing: 2.6px;
-  }
-
-  h4 {
-    font-size: 11px;
-    line-height: 25px;
-    letter-spacing: 1px;
-  }
+/*
+    GRID
+*/
+@mixin grid1R($gap: 0) {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $gap;
+}
+@mixin grid1C($gap: 0) {
+  display: grid;
+  grid-auto-flow: row;
+  gap: $gap;
 }
