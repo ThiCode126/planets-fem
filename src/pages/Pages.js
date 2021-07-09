@@ -5,7 +5,7 @@ import data from '../utils/data.json'
 
 const Pages = () => {
 
-  let { id = 0 } = useParams();
+  let { id = 2 } = useParams();
 
   const [dataPages, setDataPages] = useState(null);
   const [activeTab, setActiveTab] = useState("overview");
