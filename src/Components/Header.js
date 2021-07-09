@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import {
-  Link
-} from "react-router-dom";
-import { ReactSVG } from 'react-svg'
+import { Link } from "react-router-dom";
+import { ReactSVG } from 'react-svg';
 
 const Header = ({ size }) => {
 
@@ -19,21 +17,21 @@ const Header = ({ size }) => {
 
           {size.device === "mobile" ? (
             <div className="hamburger">
-              <ReactSVG
+              <img
                 onClick={() => setIsOpen(!isOpen)}
                 className="hamburger-svg"
+                alt="hamburger-svg"
                 src="/assets/icon-hamburger.svg"
-                wrapper="svg"
               />
             </div>
           ) : ""}
 
           <nav className={`${size.device} open-${isOpen}`}>
-            <ul>
+            <ul onClick={() => setIsOpen(false)}>
               <li id="li-0">
 
-                <Link to="/0/Mercury">
-                  <h4>
+                <h4>
+                  <Link to="/0/Mercury">
                     Mercury
                     {size.device === "mobile" ? (
                       <ReactSVG
@@ -42,8 +40,8 @@ const Header = ({ size }) => {
                         wrapper="svg"
                       />
                     ) : ""}
-                  </h4>
-                </Link>
+                  </Link>
+                </h4>
               </li>
               <li id="li-1">
                 <h4>

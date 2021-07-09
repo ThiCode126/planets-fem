@@ -39,6 +39,20 @@
 }
 
 /*
+    MARGIN
+*/
+
+@mixin mX($left: 0, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin mY($top: 0, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+/*
     FLEX
 */
 

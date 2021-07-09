@@ -13,7 +13,7 @@ header {
       font-style: normal;
       font-weight: normal;
       font-size: 28px;
-      line-height: 40px;
+      line-height: 36px;
       letter-spacing: -1.05px;
       text-transform: uppercase;
     }
@@ -21,6 +21,7 @@ header {
     .hamburger {
       width: 24px;
       height: 17px;
+      cursor: pointer;
     }
 
     .mobile {
@@ -31,6 +32,7 @@ header {
       &.open-true {
         background-color: var(--dark);
         position: absolute;
+        z-index: 10;
         top: 74px;
         width: 327px;
 
@@ -54,6 +56,7 @@ header {
           &::before {
             position: absolute;
             content: "";
+            z-index: 10;
             @include wh(20px);
             border-radius: 50%;
           }
@@ -123,6 +126,8 @@ header {
           justify-content: space-between;
           align-items: center;
           gap: 33px;
+          height: 27px;
+          margin-top: 35px;
         }
       }
     }
@@ -136,45 +141,53 @@ header {
   header {
     position: relative;
     .in-header {
-      @include pY(0, 20px);
+      @include pY(0);
       flex-direction: row;
 
-      ul {
-        height: 65px;
-
-        li {
+      nav {
+        ul {
           height: 65px;
-          border-top: 4px solid transparent;
-          padding-top: 29px;
-        }
+          @include mY(0, 20px);
+          margin-top: 0;
 
-        li::before {
-          content: "";
-        }
+          li {
+            line-height: 25px;
 
-        #li-0:hover {
-          border-color: var(--dark-green);
-        }
-        #li-1:hover {
-          border-color: var(--dark-yellow);
-        }
-        #li-2:hover {
-          border-color: var(--violet);
-        }
-        #li-3:hover {
-          border-color: var(--red);
-        }
-        #li-4:hover {
-          border-color: var(--dark-red);
-        }
-        #li-5:hover {
-          border-color: var(--dark-orange);
-        }
-        #li-6:hover {
-          border-color: var(--light-green);
-        }
-        #li-7:hover {
-          border-color: var(--dark-blue);
+            border-top: 4px solid transparent;
+            @include pY(29px, 7px);
+            &:hover {
+              opacity: 0.75;
+            }
+          }
+
+          li::before {
+            content: "";
+          }
+
+          #li-0:hover {
+            border-color: var(--dark-green);
+          }
+          #li-1:hover {
+            border-color: var(--dark-yellow);
+          }
+          #li-2:hover {
+            border-color: var(--violet);
+          }
+          #li-3:hover {
+            border-color: var(--red);
+          }
+          #li-4:hover {
+            border-color: var(--dark-red);
+          }
+          #li-5:hover {
+            border-color: var(--dark-orange);
+          }
+          #li-6:hover {
+            border-color: var(--light-green);
+          }
+          #li-7:hover {
+            border-color: var(--dark-blue);
+          }
         }
       }
     }

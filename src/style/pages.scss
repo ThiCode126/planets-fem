@@ -1,0 +1,418 @@
+#page {
+  .in-section {
+    .grid-block {
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+        .btn {
+          cursor: pointer;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 4px solid transparent;
+
+          .number {
+            display: none;
+          }
+        }
+      }
+      .planet {
+        height: 304px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .geology-png {
+          position: absolute;
+          z-index: 5;
+          @include wh(auto, 25%);
+          bottom: 60px;
+        }
+      }
+
+      .details {
+        text-align: center;
+
+        .text {
+          @include mY(10px, 32px);
+        }
+
+        .link {
+          a {
+            text-decoration: underline;
+          }
+
+          .source-svg {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    .info-block {
+      @include pY(28px, 47px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 23px 12px;
+        border: 1px solid rgba($color: #fff, $alpha: 0.2);
+      }
+    }
+  }
+
+  &.Mercury {
+    .btn.active {
+      border-color: var(--dark-green) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(110px);
+    }
+  }
+  &.Venus {
+    .btn.active {
+      border-color: var(--dark-yellow) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(154px);
+    }
+  }
+  &.Earth {
+    .btn.active {
+      border-color: var(--violet) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(173px);
+    }
+  }
+  &.Mars {
+    .btn.active {
+      border-color: var(--red) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(129px);
+    }
+  }
+  &.Jupiter {
+    .btn.active {
+      border-color: var(--dark-red) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(224px);
+    }
+  }
+  &.Saturn {
+    .btn.active {
+      border-color: var(--dark-orange) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(256px);
+    }
+  }
+  &.Uranus {
+    .btn.active {
+      border-color: var(--light-green) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(176px);
+    }
+  }
+  &.Neptune {
+    .btn.active {
+      border-color: var(--dark-blue) !important;
+    }
+
+    .planet-svg,
+    .structure-svg {
+      @include wh(173px);
+    }
+  }
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  #page {
+    .in-section {
+      .grid-block {
+        display: grid;
+        grid-template-columns: 339px auto;
+
+        .nav {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+
+          flex-direction: column;
+          justify-content: center;
+          gap: 16px;
+          padding-left: 69px;
+          border: none;
+          height: auto;
+
+          .btn {
+            height: 40px;
+            width: 100%;
+            border: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+            h3 {
+              display: flex;
+
+              .number {
+                display: block;
+                opacity: 0.5;
+                @include pX(20px, 14px);
+              }
+            }
+          }
+        }
+        .planet {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+
+          height: 460px;
+        }
+        .details {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+
+          text-align: left;
+
+          .text {
+            @include mY(17px, 32px);
+          }
+        }
+      }
+
+      .info-block {
+        @include pY(27px, 36px);
+        flex-direction: row;
+        gap: 11px;
+
+        div {
+          display: block;
+          width: 164px;
+          padding: 16px 0 19px 15px;
+        }
+      }
+    }
+
+    &.Mercury {
+      .btn.active {
+        background: var(--dark-green);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(184px);
+      }
+    }
+    &.Venus {
+      .btn.active {
+        background: var(--dark-yellow);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(253px);
+      }
+    }
+    &.Earth {
+      .btn.active {
+        background: var(--violet);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(285px);
+      }
+    }
+    &.Mars {
+      .btn.active {
+        background: var(--red);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(213px);
+      }
+    }
+    &.Jupiter {
+      .btn.active {
+        background: var(--dark-red);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(369px);
+      }
+    }
+    &.Saturn {
+      .btn.active {
+        background: var(--dark-orange);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(422px);
+      }
+    }
+    &.Uranus {
+      .btn.active {
+        background: var(--light-green);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(290px);
+      }
+    }
+    &.Neptune {
+      .btn.active {
+        background: var(--dark-blue);
+      }
+
+      .planet-svg,
+      .structure-svg {
+        @include wh(285px);
+      }
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #page {
+    .in-section {
+      .grid-block {
+        grid-template-columns: auto 350px;
+        padding-top: 126px;
+
+        .nav {
+          padding: 0;
+
+          .btn {
+            height: 48px;
+          }
+        }
+
+        .planet {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 3;
+
+          height: 541px;
+
+          .geology-png {
+            @include wh(auto, 199px);
+            bottom: 0;
+          }
+        }
+        .details {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+
+          text-align: left;
+
+          .text {
+            @include mY(17px, 32px);
+          }
+        }
+      }
+
+      .info-block {
+        @include pY(87px, 56px);
+        gap: 30px;
+
+        div {
+          width: 255px;
+          padding: 20px 0 21px 23px;
+        }
+      }
+    }
+
+    &.Mercury {
+      .planet-svg,
+      .structure-svg {
+        @include wh(290px);
+      }
+    }
+    &.Venus {
+      .planet-svg,
+      .structure-svg {
+        @include wh(400px);
+      }
+    }
+    &.Earth {
+      .planet-svg,
+      .structure-svg {
+        @include wh(450px);
+      }
+    }
+    &.Mars {
+      .planet-svg,
+      .structure-svg {
+        @include wh(336px);
+      }
+    }
+    &.Jupiter {
+      .planet-svg,
+      .structure-svg {
+        @include wh(582px);
+      }
+    }
+    &.Saturn {
+      .planet-svg,
+      .structure-svg {
+        @include wh(666px);
+      }
+    }
+    &.Uranus {
+      .planet-svg,
+      .structure-svg {
+        @include wh(458px);
+      }
+    }
+    &.Neptune {
+      .planet-svg,
+      .structure-svg {
+        @include wh(450px);
+      }
+    }
+  }
+}

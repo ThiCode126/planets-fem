@@ -16,7 +16,7 @@ body {
 h1 {
   font-family: "Antonio", sans-serif;
   font-weight: 500;
-  @include text(40px, 52px);
+  @include text(40px, 58px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -26,19 +26,36 @@ h2 {
   font-weight: 500;
   @include text(20px, 26px, 0.75px);
   margin: 0;
+  text-transform: uppercase;
 }
 
 h3 {
   font-weight: 700;
-  @include text(9px, 10px, 1.9px);
+  @include text(9px, 10px, 1.92857px);
   margin: 0;
+  text-transform: uppercase;
 }
 
 h4 {
   font-weight: 700;
-  @include text(11px, 25px, 1px);
+  @include text(15px, 25px, 1.36364px);
   margin: 0;
   text-transform: uppercase;
+}
+
+h5 {
+  font-weight: 700;
+  @include text(8px, 16px, 0.727273px);
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+h6 {
+  font-weight: 400;
+  @include text(12px, 25px);
+  margin: 0;
+  opacity: 0.5;
 }
 
 a,
@@ -64,11 +81,11 @@ ul {
   }
 
   h2 {
-    @include text(24px, 31px, -0.9px);
+    @include text(24px, 35px, -0.9px);
   }
 
   h3 {
-    @include text(9px, 25px, 1.9px);
+    @include text(9px, 25px, 1.92857px);
   }
 
   h4 {
@@ -93,14 +110,14 @@ ul {
   }
 
   h2 {
-    @include text(40px, 52px, -1.5px);
+    @include text(40px, 58px, -1.5px);
   }
 
   h3 {
-    @include text(12px, 25px, 2.6px);
+    @include text(12px, 25px, 2.57143px);
   }
 
-  h4 {
+  h5 {
     @include text(11px, 25px, 1px);
   }
 }
