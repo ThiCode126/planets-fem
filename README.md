@@ -10,8 +10,8 @@ This is a solution to the [Planets fact site challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/ThiCode126/planets-fem](https://github.com/ThiCode126/planets-fem)
+- Live Site URL: [https://planets-thicode.netlify.app/](https://planets-thicode.netlify.app/)
 
 ## My process
 
