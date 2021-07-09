@@ -73,7 +73,7 @@ const Pages = () => {
                   {dataPages[activeTab].content}
                 </p>
                 <h6 className="link">
-                  Source : <a href={dataPages[activeTab].content} target="_blank" rel="noopener noreferrer">Wikipedia</a>
+                  Source : <a href={dataPages[activeTab].source} target="_blank" rel="noopener noreferrer">Wikipedia</a>
                   <img
                     className="source-svg"
                     alt="source-svg"
